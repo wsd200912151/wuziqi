@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五子棋</title>
+    <script src="jquery.js"></script>
+    <script src="five.js"></script>
+    <link rel="stylesheet" href="five.css">
+</head>
+<body>
+    <canvas width="600" height="600" id="canvas"></canvas>
+    <img src="images/240411-1510050G95630.jpg" alt="" hidden id="img">
+    <img src="images/9ab871c2265ed90711c4540cbafa3a6c.jpg" alt="" class="img">
+    <canvas width="300" height="400" id="canvas-left"></canvas>
+    <canvas width="300" height="400" id="canvas-right"></canvas>
+    <div class="big">
+        <div class="left">开始游戏</div>
+        <div class="right">退出游戏</div>
+        <div class="xian r-r">人人模式</div>
+        <div class="xian r-j">人机模式</div>
+        <div class="xian end">游戏结束</div>
+    </div>
+    <div class="down">
+        <div class="bor">
+            <div class="border"></div>
+            <div class="border"></div>
+            <div class="border"></div>
+        </div>
+        <div class="r_r">人人模式</div>
+        <div class="r_j">人机模式</div>
+        <div class="end">退出游戏</div>
+    </div>
+    <div class="end-d">游戏结束</div>
+    <div class="win">
+        <span class="qiwin"></span>
+        <span class="qipu">
+            需要看棋谱吗?
+        </span>
+        <div class="yes">需要</div>
+        <div class="none">不需要</div>
+    </div>
+
+</body>
+</html>

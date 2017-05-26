@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <canvas width="400" height="400" id="canvas-left"></canvas>
+    <canvas width="400" height="400" id="canvas-right"></canvas>
+    <img src="images/8424366f003c029391409b7051d657ee.jpg" alt="" class="img">
+</body>
+<style>
+    #canvas-left,#canvas-right{
+        border:1px solid red;
+        position: absolute;
+    }
+    #canvas-right{
+        left:50px;
+    }
+    .img{
+        width:100vw;
+        display: block;
+    }
+</style>
+<script>
+    function tj(){
+        var canleft=$('#canvas-left').get(0);
+        var ctl=canleft.getContext('2d');
+        var canw=canleft.width;
+        function w(i){
+            return canw/i;
+        }
+        ctl.beginPath();
+        ctl.fillStyle='#000';
+        ctl.moveTo(w(2),w(1));
+        ctl.arc(w(2),w(2),w(2),Math.PI/2,Math.PI*3/2);
+        ctl.arc(w(2),w(4),w(4),Math.PI*3/2,Math.PI/2);
+        ctl.arc(w(2),w(4/3),w(4),Math.PI*3/2,Math.PI/2,true);
+        ctl.fill();
+        ctl.closePath()
+        ctl.beginPath();
+        ctl.fillStyle='#fff';
+        ctl.arc(w(2),w(4),w(12),0,Math.PI*2);
+        ctl.fill();
+        ctl.closePath();
+        var canright=$('#canvas-right').get(0);
+        var ctr=canright.getContext('2d');
+        ctr.beginPath();
+        ctr.fillStyle='#fff';
+        ctr.moveTo(w(2),w(1));
+        ctr.arc(w(2),w(2),w(2),Math.PI/2,Math.PI*3/2,true);
+        ctr.arc(w(2),w(4),w(4),Math.PI*3/2,Math.PI/2);
+        ctr.arc(w(2),w(4/3),w(4),Math.PI*3/2,Math.PI/2,true);
+        ctr.fill();
+        ctr.closePath();
+        ctr.beginPath();
+        ctr.fillStyle='#000';
+        ctr.arc(w(2),w(4/3),w(12),0,Math.PI*2);
+        ctr.fill();
+        ctr.closePath();
+    }
+    tj();
+</script>
+</html>
